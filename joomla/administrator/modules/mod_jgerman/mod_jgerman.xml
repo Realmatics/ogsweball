@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: mod_jgerman.xml 48 2009-11-01 19:55:39Z sisko1990 $ -->
+<install type="module" version="1.5.0" client="administrator" method="upgrade">
+	<name>Need update?</name>
+	<position>cpanel</position>
+	<author>Jan Erik Zassenhaus</author>
+	<creationDate>August 2008</creationDate>
+	<copyright>Copyright (C) 2008 J!German. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>Jan.Zassenhaus@jgerman.de</authorEmail>
+	<authorUrl>www.jgerman.de</authorUrl>
+	<version>1.2.3</version>
+	<description>MOD JGERMAN DESC</description>
+	<languages>
+	  <language tag="en-GB">language/en-GB.mod_jgerman.ini</language>
+    <language tag="de-DE">language/de-DE.mod_jgerman.ini</language>
+    <language tag="sl-SI">language/sl-SI.mod_jgerman.ini</language>
+  </languages>
+	<files>
+		<filename module="mod_jgerman">mod_jgerman.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<params>
+	  <param type="spacer" default="CHECKING" />
+	  <param name="select_language" type="list" default="de-DE" label="SELECT LANGUAGE" description="SELECT LANGUAGE DESC">
+      <option value="de-DE">Deutsch (DE-CH-AT)</option>
+    </param>
+		<param name="auto_check" type="radio" default="auto_check_no" label="AUTO CHECK" description="AUTO CHECK DESC">
+			<option value="auto_check_yes">YES</option>
+			<option value="auto_check_no">NO</option>
+	  </param>
+		<param name="check_core" type="radio" default="check_core_show" label="CHECK CORE" description="CHECK CORE DESC">
+			<option value="check_core_show">YES</option>
+			<option value="check_core_hide">NO</option>
+	  </param>
+	  <param type="spacer" default="NOTICES" />
+		<param name="delte_notice" type="radio" default="delte_notice_show" label="DELETE NOTICE" description="DELETE NOTICE DESC">
+			<option value="delete_notice_show">YES</option>
+			<option value="delete_notice_hide">NO</option>
+	  </param>
+	  <param type="spacer" default="DISPLAY" />
+	  <param name="image_size" type="radio" default="middle" label="IMAGE SIZE" description="IMAGE SIZE DESC">
+		  <option value="big">BIG</option>
+			<option value="middle">MIDDLE</option>
+			<option value="small">SMALL</option>
+	  </param>
+	  <param type="spacer" />
+	  <param type="spacer" default="TRANSLATOR" />
+	</params>
+	<params group="advanced">
+		<param name="cache" type="list" default="0" label="CACHING" description="SELECT WHETHER TO CACHE THE CONTENT OF THIS MODULE">
+			<option value="0">NEVER</option>
+	  	</param>
+	</params>
+</install>

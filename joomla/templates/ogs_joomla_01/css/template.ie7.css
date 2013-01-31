@@ -1,0 +1,295 @@
+/* begin Page */
+
+/* Start Box */
+.my-box {
+   zoom:expression(runtimeStyle.zoom=1,function(e){for(var i=0;i<e.length;i++)insertBefore(document.createElement('div'),firstChild).className='my-box-'+e[ i]}('br,bl,cr,cl,tr,tl'.split(',')));
+}
+.my-box-body {
+   zoom:1;
+}
+.my-box-tl, .my-box-tr, .my-box-cl, .my-box-cr, .my-box-bl, .my-box-br {
+   position:absolute;
+   display:block;
+   top:0;
+   bottom:0;
+   background-repeat: no-repeat;
+}
+.my-box-tl,.my-box-bl,.my-box-cl {
+   left:0;
+}
+.my-box-tr,.my-box-br,.my-box-cr {
+   right:0;
+}
+.my-box-cl, .my-box-cr {
+   background-repeat:repeat-y;
+}
+.my-box-tl {
+   background-position: top left;
+   z-index:-3;
+}
+.my-box-tr {
+   background-position: top right;
+   z-index:-3;
+}
+.my-box-cl {
+   background-position: center left;
+   z-index:-3;
+}
+.my-box-cr {
+   background-position: center right;
+   z-index:-3;
+}
+.my-box-bl {
+   background-position: bottom left;
+   z-index:-3;
+}
+.my-box-br {
+   background-position: bottom right;
+   z-index:-3;
+}
+
+.my-box .my-box-tl,.my-box .my-box-tr,.my-box .my-box-cl,.my-box .my-box-cr,.my-box .my-box-bl,.my-box .my-box-br{
+   z-index:-2;
+}
+.my-box .my-box .my-box-tl,.my-box .my-box .my-box-tr,.my-box .my-box .my-box-cl,.my-box .my-box .my-box-cr,.my-box .my-box .my-box-bl,.my-box .my-box .my-box-br{
+   z-index:-1;
+}
+/* End Box */
+
+/* Start Bar */
+.my-bar {
+   zoom:expression(runtimeStyle.zoom=1,function(e){for(var i=0;i<e.length;i++)insertBefore(document.createElement('div'),firstChild).className='my-bar-'+e[ i]}('r,l'.split(',')));
+}
+.my-bar-l, .my-bar-r {
+   position:absolute;
+   z-index:-1;
+   top:0;
+   bottom:0;
+   content:' ';
+   background-repeat:repeat-y;
+}
+.my-bar-l {
+   left:0;
+   background-position: top left;
+}
+.my-bar-r {
+   right:0;
+   background-position: top right;
+}
+/* End Bar */
+
+/* end Page */
+
+/* begin Box, Sheet */
+.my-sheet>.my-box-tl, .my-sheet>.my-box-tr{
+   background-image: url('../images/sheet_t.png');
+}
+.my-sheet>.my-box-bl, .my-sheet>.my-box-br {
+   background-image: url('../images/sheet_b.png');
+}
+.my-sheet>.my-box-tl, .my-sheet>.my-box-bl, .my-sheet>.my-box-cl{
+   right:26px;
+}
+.my-sheet>.my-box-tr, .my-sheet>.my-box-br, .my-sheet>.my-box-cr{
+   width: 26px;
+}
+.my-sheet>.my-box-cl, .my-sheet>.my-box-cr{
+   top:26px;
+   bottom:26px;
+   background-image:url('../images/sheet.png');
+}
+/* end Box, Sheet */
+
+/* begin Header */
+.my-header {
+   zoom:expression(runtimeStyle.zoom=1,insertBefore(document.createElement('div'),firstChild).className='my-header-png',insertBefore(document.createElement('div'),firstChild).className='my-header-jpeg');
+   z-index: 1;
+}
+
+.my-header-png
+{
+   position: absolute;
+   z-index:-2;
+   top: 0;
+   width:100%;
+   height: 118px;
+   background-image: url('../images/header.png');
+   background-repeat: no-repeat;
+   background-position:top left;
+}
+
+.my-header-jpeg
+{
+   position: absolute;
+   z-index:-1;
+   top: 0;
+   left:3px;
+   right:3px;
+   height: 118px;
+   background-image: url('../images/header.jpg');
+   background-repeat: no-repeat;
+   background-position: center left;
+}
+/* end Header */
+
+/* begin Menu */
+.my-nav {
+   position: expression(runtimeStyle.position='relative');
+}
+.my-hmenu ul li {
+   float: left !important;
+   width:100%;
+}
+.my-hmenu>li 
+{
+   display: inline !important;
+   zoom: 1;
+   float: none !important;
+   vertical-align: top;
+}
+
+/* end Menu */
+
+/* begin MenuItem */
+ul.my-hmenu>li>a{
+   zoom:expression(runtimeStyle.zoom=1,function(e){for(var i=0;i<e.length;i++)insertBefore(document.createElement('span'),firstChild).className='my-hmenu-'+e[ i]}('r,l'.split(',')));
+}
+ul.my-hmenu>li>a>span.my-hmenu-l, ul.my-hmenu>li>a>span.my-hmenu-r
+{
+   position: absolute;
+   display: block;
+   top: 0;
+   bottom:0;
+   z-index: -1;
+   background-image: url('../images/menuitem.png');
+}
+
+ul.my-hmenu>li>a>span.my-hmenu-l
+{
+   left: 0;
+   right: 0;
+   background-position: top left;
+}
+
+ul.my-hmenu>li>a>span.my-hmenu-r
+{
+   width: 0;
+   right: 0;
+   background-position: top right;
+}
+
+ul.my-hmenu>li>a:hover>span.my-hmenu-l, ul.my-hmenu>li:hover>a>span.my-hmenu-l {
+   background-position: center left;
+}
+ul.my-hmenu>li>a:hover>span.my-hmenu-r, ul.my-hmenu>li:hover>a>span.my-hmenu-r {
+   background-position: center right;
+}
+ul.my-hmenu>li>a:hover, ul.my-hmenu>li:hover>a{
+   color: #000000;
+}
+
+/* end MenuItem */
+
+/* begin MenuSeparator */
+ul.my-hmenu>li:first-child {
+   padding-right:0;
+}
+/* end MenuSeparator */
+
+/* begin Layout */
+.my-content-layout, .my-content-layout-row, .my-layout-cell 
+{
+   display: block;
+   zoom: 1;
+}
+.my-layout-cell
+{
+   position:relative;
+   float: left;
+   clear: right;
+}
+/* end Layout */
+
+/* begin PostIcons, PostHeaderIcons */
+.my-postheadericons span{
+   zoom: 1;
+}/* end PostIcons, PostHeaderIcons */
+
+/* begin PostContent */
+.my-postcontent {
+   height: 1%;
+}
+/* end PostContent */
+
+/* begin PostIcons, PostFooterIcons */
+.my-postfootericons span{
+   zoom: 1;
+}/* end PostIcons, PostFooterIcons */
+
+/* begin Footer */
+.my-footer {
+   zoom:expression(runtimeStyle.zoom=1,function(e){for(var i=0;i<e.length;i++)insertBefore(document.createElement('div'),firstChild).className='my-footer-'+e[ i]}('r,l,t'.split(',')));
+}
+.my-footer-body 
+{
+   zoom: 1;
+   padding-right: 0;
+}
+
+.my-footer-t
+{
+   position: absolute;
+   z-index:-1;
+   left:0;
+   right:0;
+   top:0;
+   bottom:50px;
+   background-image: url('../images/footer.png');
+   background-position:bottom left;
+}
+
+.my-footer-l, .my-footer-r 
+{
+   position: absolute;
+   content:' ';
+   z-index:-1;
+   bottom:0;
+   height:50px;
+   background-image: url('../images/footer_b.png');
+}
+
+.my-footer-l
+{
+   left:0;
+   right:3px;
+   background-position: top left;
+}
+
+.my-footer-r
+{
+   right:0;
+   width:3px;
+   background-position: top right;
+}
+/* end Footer */
+
+/* begin LayoutCell, content */
+.my-content 
+{
+   width: auto;
+   float:none;
+}
+/* end LayoutCell, content */
+
+/* Plugin compatilibity. */
+
+/* 154150, news pro gk1 */
+.gk_npro_full_scroll1
+{
+   position: relative;
+}
+
+.nspro_bg_wrap .my-button-wrapper a
+{
+   float: none !important;
+}

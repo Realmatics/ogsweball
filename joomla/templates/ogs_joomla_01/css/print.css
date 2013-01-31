@@ -1,0 +1,324 @@
+/* begin Page */
+
+/* Created by Artisteer v3.1.0.48375 */
+
+body
+{
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 13px;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited,
+.my-postheader, .my-postheader a, .my-postheader a:link, .my-postheader a:visited, .my-postheader a:hover,
+.my-blockheader .t, .my-vmenublockheader .t, .my-logo-text, .my-logo-text a,
+.my-logo-name, .my-logo-name a, .my-logo-name a:link, .my-logo-name a:visited, .my-logo-name a:hover
+{
+   font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, Serif;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 22px;
+   text-decoration: none;
+}
+
+a
+{
+   text-decoration: none;
+}
+
+a:link
+{
+   text-decoration: none;
+}
+
+a:hover, a.hover
+{
+   text-decoration: underline;
+}
+
+h1, h1 a, h1 a:link, h1 a:visited, h1 a:hover
+{
+   font-size: 26px;
+}
+
+h3, h3 a, h3 a:link, h3 a:visited, h3 a:hover
+{
+   font-size: 18px;
+}
+
+h4, h4 a, h4 a:link, h4 a:visited, h4 a:hover
+{
+   font-size: 16px;
+}
+
+h5, h5 a, h5 a:link, h5 a:visited, h5 a:hover
+{
+   font-size: 14px;
+}
+
+h6, h6 a, h6 a:link, h6 a:visited, h6 a:hover
+{
+   font-size: 13px;
+}
+
+#my-main
+{
+   position: relative;
+   width: 100%;
+   left: 0;
+   top: 0;
+   cursor:default;
+}
+
+#my-page-background-glare, #my-page-background-middle-texture, #my-page-background-top-texture
+{
+   display: none;
+}
+
+.cleared
+{
+   float: none;
+   clear: both;
+   margin: 0;
+   padding: 0;
+   border: none;
+   font-size: 1px;
+}
+
+form
+{
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+table.position
+{
+   position: relative;
+   width: 100%;
+   table-layout: fixed;
+}
+/* end Page */
+
+/* begin Box, Post */
+.my-post
+{
+   margin: 10px;
+}
+
+a img
+{
+   border: 0;
+}
+
+.my-article img, img.my-article
+{
+   margin: 7px 7px 7px 7px;
+}
+
+.my-metadata-icons img
+{
+   border: none;
+   vertical-align: middle;
+   margin: 2px;
+}
+
+.my-article table, table.my-article
+{
+   border-collapse: collapse;
+   margin: 1px;
+   width: auto;
+}
+
+.my-article table, table.my-article .my-article tr, .my-article th, .my-article td
+{
+   background-color: Transparent;
+}
+
+.my-article th, .my-article td
+{
+   padding: 2px;
+   border: solid 1px #eeeeee;
+   vertical-align: top;
+   text-align: left;
+}
+
+.my-article th
+{
+   text-align: center;
+   vertical-align: middle;
+   padding: 7px;
+}
+
+pre
+{
+   overflow: auto;
+   padding: 0.1em;
+}
+
+/* end Box, Post */
+
+/* begin PostHeaderIcon */
+.my-postheader
+{
+   margin: 5px 0;
+   font-size: 20px;
+}
+
+.my-postheader a, 
+.my-postheader a:link, 
+.my-postheader a:visited,
+.my-postheader a.visited,
+.my-postheader a:hover,
+.my-postheader a.hovered
+{
+   font-size: 20px;
+}
+
+.my-postheader a, .my-postheader a:link
+{
+   text-align: left;
+   text-decoration: none;
+}
+
+/* end PostHeaderIcon */
+
+/* begin PostHeader */
+
+/* end PostHeader */
+
+/* begin PostIcons, PostHeaderIcons */
+.my-postheadericons
+{
+   padding: 1px;
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+
+.my-postheadericons a, .my-postheadericons a:link, .my-postheadericons a:visited, .my-postheadericons a:hover
+{
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+
+.my-postheadericons a, .my-postheadericons a:link, .my-postheadericons a:visited, .my-postheadericons a:hover
+{
+   margin: 0;
+}
+
+.my-postheadericons a:link
+{
+   text-decoration: none;
+}
+
+.my-postheadericons a:visited, .my-postheadericons a.visited
+{
+   font-style: italic;
+   font-weight: normal;
+}
+
+.my-postheadericons a:hover, .my-postheadericons a.hover
+{
+   text-decoration: underline;
+}
+/* end PostIcons, PostHeaderIcons */
+
+/* begin PostContent */
+.my-postcontent p
+{
+   margin: 0.5em 0;
+}
+
+.my-postcontent
+{
+   margin: 0;
+}
+/* end PostContent */
+
+/* begin PostBullets */
+ol, ul
+{
+   margin: 1em 0 1em 2em;
+   padding: 0;
+   font-size: 13px;
+}
+
+li ol, li ul
+{
+   margin: 0.5em 0 0.5em 2em;
+   padding: 0;
+}
+
+li
+{
+   margin: 0.2em 0;
+   padding: 0;
+}
+
+ul
+{
+   list-style-type: none;
+}
+
+ol
+{
+   list-style-position: inside;
+}
+
+.my-post li
+{
+   padding: 0 0 0 12px;
+   line-height: 1em;
+}
+
+.my-post ol li, .my-post ul ol li
+{
+   background: none;
+   padding-left: 0;
+}
+
+.my-post ul li, .my-post ol ul li
+{
+   background-image: url('../images/postbullets.png');
+   background-repeat: no-repeat;
+   padding-left: 12px;
+}
+
+/* end PostBullets */
+
+/* begin PostQuote */
+
+blockquote,
+.my-postcontent blockquote
+{
+   margin: 10px 10px 10px 50px;
+   padding: {QuoteIconPadding}px {QuoteIconPadding}px {QuoteIconPadding}px {QuoteIconLeftPadding}px;
+}
+
+/* end PostQuote */
+
+/* begin PostIcons, PostFooterIcons */
+.my-postfootericons
+{
+   padding: 1px;
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+
+.my-postfootericons a, .my-postfootericons a:link, .my-postfootericons a:visited, .my-postfootericons a:hover
+{
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+
+.my-postfootericons a, .my-postfootericons a:link, .my-postfootericons a:visited, .my-postfootericons a:hover
+{
+   margin: 0;
+}
+
+.my-postfootericons a:link
+{
+   text-decoration: none;
+}
+
+/* end PostIcons, PostFooterIcons */
+
