@@ -9,16 +9,16 @@ html, body {
 }
 
 h1 {
-	color: #FFFFFF;
+	color: #101010;
 }
 
 h2 {
-	color: #28313F;
+	color: #101010;
 }
 
 h3 {
 	border-bottom-color: #CCCCCC;
-	color: #115098;
+	color: #101010;
 }
 
 hr {
@@ -48,13 +48,13 @@ hr.dashed {
 /* Round cornered boxes and backgrounds
 ---------------------------------------- */
 .headerbar {
-	background-color: #12A3EB;
+	background-color: #3e6b95;
 	background-image: url("{T_THEME_PATH}/images/bg_header.gif");
 	color: #FFFFFF;
 }
 
 .navbar {
-	background-color: #cadceb;
+	background-color: #d4dae0;
 }
 
 .forabg {
@@ -63,7 +63,7 @@ hr.dashed {
 }
 
 .forumbg {
-	background-color: #12A3EB;
+	background-color: #3e6b95;
 	background-image: url("{T_THEME_PATH}/images/bg_header.gif");
 }
 
@@ -82,7 +82,7 @@ hr.dashed {
 
 .bg1	{ background-color: #ECF3F7; }
 .bg2	{ background-color: #e1ebf2;  }
-.bg3	{ background-color: #cadceb; }
+.bg3	{ background-color: #d4dae0; }
 
 .ucprowbg {
 	background-color: #DCDEE2;
@@ -765,7 +765,7 @@ ul.cplist {
 }
 
 #tabs .activetab a {
-	border-bottom-color: #CADCEB;
+	border-bottom-color: #d4dae0;
 }
 
 #tabs .activetab a span {

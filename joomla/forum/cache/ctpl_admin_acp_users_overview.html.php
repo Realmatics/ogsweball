@@ -144,19 +144,27 @@
 
 	<?php if (! $this->_rootref['S_OWN_ACCOUNT']) {  ?>
 
-	<form id="user_delete" method="post" action="<?php echo (isset($this->_rootref['U_ACTION'])) ? $this->_rootref['U_ACTION'] : ''; ?>">
-	<fieldset>
-		<legend><?php echo ((isset($this->_rootref['L_DELETE_USER'])) ? $this->_rootref['L_DELETE_USER'] : ((isset($user->lang['DELETE_USER'])) ? $user->lang['DELETE_USER'] : '{ DELETE_USER }')); ?></legend>
-		<dl>
-			<dt><label for="delete_type"><?php echo ((isset($this->_rootref['L_DELETE_USER'])) ? $this->_rootref['L_DELETE_USER'] : ((isset($user->lang['DELETE_USER'])) ? $user->lang['DELETE_USER'] : '{ DELETE_USER }')); ?>:</label><br /><span><?php echo ((isset($this->_rootref['L_DELETE_USER_EXPLAIN'])) ? $this->_rootref['L_DELETE_USER_EXPLAIN'] : ((isset($user->lang['DELETE_USER_EXPLAIN'])) ? $user->lang['DELETE_USER_EXPLAIN'] : '{ DELETE_USER_EXPLAIN }')); ?></span></dt>
-			<dd><select id="delete_type" name="delete_type"><option class="sep" value=""><?php echo ((isset($this->_rootref['L_SELECT_OPTION'])) ? $this->_rootref['L_SELECT_OPTION'] : ((isset($user->lang['SELECT_OPTION'])) ? $user->lang['SELECT_OPTION'] : '{ SELECT_OPTION }')); ?></option><option value="retain"><?php echo ((isset($this->_rootref['L_RETAIN_POSTS'])) ? $this->_rootref['L_RETAIN_POSTS'] : ((isset($user->lang['RETAIN_POSTS'])) ? $user->lang['RETAIN_POSTS'] : '{ RETAIN_POSTS }')); ?></option><option value="remove"><?php echo ((isset($this->_rootref['L_DELETE_POSTS'])) ? $this->_rootref['L_DELETE_POSTS'] : ((isset($user->lang['DELETE_POSTS'])) ? $user->lang['DELETE_POSTS'] : '{ DELETE_POSTS }')); ?></option></select></dd>
-		</dl>
-		<p class="quick">
-			<input class="button1" type="submit" name="update" value="<?php echo ((isset($this->_rootref['L_SUBMIT'])) ? $this->_rootref['L_SUBMIT'] : ((isset($user->lang['SUBMIT'])) ? $user->lang['SUBMIT'] : '{ SUBMIT }')); ?>" />
-			<input type="hidden" name="delete" value="1" />
-			<?php echo (isset($this->_rootref['S_FORM_TOKEN'])) ? $this->_rootref['S_FORM_TOKEN'] : ''; ?>
+		<form id="user_delete" method="post" action="<?php echo (isset($this->_rootref['U_ACTION'])) ? $this->_rootref['U_ACTION'] : ''; ?>">
+			<fieldset>
+				<legend><?php echo ((isset($this->_rootref['L_DELETE_USER'])) ? $this->_rootref['L_DELETE_USER'] : ((isset($user->lang['DELETE_USER'])) ? $user->lang['DELETE_USER'] : '{ DELETE_USER }')); ?></legend>
+				<dl>
+					<dt><label for="delete_type"><?php echo ((isset($this->_rootref['L_DELETE_USER'])) ? $this->_rootref['L_DELETE_USER'] : ((isset($user->lang['DELETE_USER'])) ? $user->lang['DELETE_USER'] : '{ DELETE_USER }')); ?>:</label><br /><span><?php echo ((isset($this->_rootref['L_DELETE_USER_EXPLAIN'])) ? $this->_rootref['L_DELETE_USER_EXPLAIN'] : ((isset($user->lang['DELETE_USER_EXPLAIN'])) ? $user->lang['DELETE_USER_EXPLAIN'] : '{ DELETE_USER_EXPLAIN }')); ?></span></dt>
+					<dd>
+					<?php if ($this->_rootref['USER_HAS_POSTS']) {  ?>
 
-		</p>
-	</fieldset>
-	</form>
+						<select id="delete_type" name="delete_type"><option class="sep" value=""><?php echo ((isset($this->_rootref['L_SELECT_OPTION'])) ? $this->_rootref['L_SELECT_OPTION'] : ((isset($user->lang['SELECT_OPTION'])) ? $user->lang['SELECT_OPTION'] : '{ SELECT_OPTION }')); ?></option><option value="retain"><?php echo ((isset($this->_rootref['L_RETAIN_POSTS'])) ? $this->_rootref['L_RETAIN_POSTS'] : ((isset($user->lang['RETAIN_POSTS'])) ? $user->lang['RETAIN_POSTS'] : '{ RETAIN_POSTS }')); ?></option><option value="remove"><?php echo ((isset($this->_rootref['L_DELETE_POSTS'])) ? $this->_rootref['L_DELETE_POSTS'] : ((isset($user->lang['DELETE_POSTS'])) ? $user->lang['DELETE_POSTS'] : '{ DELETE_POSTS }')); ?></option></select></dd>
+					<?php } else { ?>
+
+						<?php echo ((isset($this->_rootref['L_USER_NO_POSTS_TO_DELETE'])) ? $this->_rootref['L_USER_NO_POSTS_TO_DELETE'] : ((isset($user->lang['USER_NO_POSTS_TO_DELETE'])) ? $user->lang['USER_NO_POSTS_TO_DELETE'] : '{ USER_NO_POSTS_TO_DELETE }')); ?><input type="hidden" id="delete_type" name="delete_type" value="retain" />
+					<?php } ?>
+
+				</dl>
+				<p class="quick">
+					<input class="button1" type="submit" name="update" value="<?php echo ((isset($this->_rootref['L_SUBMIT'])) ? $this->_rootref['L_SUBMIT'] : ((isset($user->lang['SUBMIT'])) ? $user->lang['SUBMIT'] : '{ SUBMIT }')); ?>" />
+					<input type="hidden" name="delete" value="1" />
+					<?php echo (isset($this->_rootref['S_FORM_TOKEN'])) ? $this->_rootref['S_FORM_TOKEN'] : ''; ?>
+
+				</p>
+			</fieldset>
+		</form>
 	<?php } } ?>

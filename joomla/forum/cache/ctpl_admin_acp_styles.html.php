@@ -434,7 +434,12 @@
 	<tr>
 		<td class="row3" colspan="<?php echo (isset($this->_tpldata['DEFINE']['.']['COLSPAN'])) ? $this->_tpldata['DEFINE']['.']['COLSPAN'] : ''; ?>"><strong><?php echo ((isset($this->_rootref['L_INSTALLED'])) ? $this->_rootref['L_INSTALLED'] : ((isset($user->lang['INSTALLED'])) ? $user->lang['INSTALLED'] : '{ INSTALLED }')); ?></strong></td>
 	</tr>
-	<?php $_installed_count = (isset($this->_tpldata['installed'])) ? sizeof($this->_tpldata['installed']) : 0;if ($_installed_count) {for ($_installed_i = 0; $_installed_i < $_installed_count; ++$_installed_i){$_installed_val = &$this->_tpldata['installed'][$_installed_i]; ?>
+	<?php $_installed_count = (isset($this->_tpldata['installed'])) ? sizeof($this->_tpldata['installed']) : 0;if ($_installed_count) {for ($_installed_i = 0; $_installed_i < $_installed_count; ++$_installed_i){$_installed_val = &$this->_tpldata['installed'][$_installed_i]; if ($_installed_val['S_INACTIVE'] && ! $this->_tpldata['DEFINE']['.']['INACTIVE_STYLES']) {  $this->_tpldata['DEFINE']['.']['INACTIVE_STYLES'] = 1; ?>
+
+		<tr>
+			<td class="row3" colspan="<?php echo (isset($this->_tpldata['DEFINE']['.']['COLSPAN'])) ? $this->_tpldata['DEFINE']['.']['COLSPAN'] : ''; ?>"><strong><?php echo ((isset($this->_rootref['L_INACTIVE_STYLES'])) ? $this->_rootref['L_INACTIVE_STYLES'] : ((isset($user->lang['INACTIVE_STYLES'])) ? $user->lang['INACTIVE_STYLES'] : '{ INACTIVE_STYLES }')); ?></strong></td>
+		</tr>
+	<?php } ?>
 
 	<tr>
 		<td><strong><?php echo $_installed_val['NAME']; ?></strong><?php if ($_installed_val['S_DEFAULT_STYLE']) {  ?> *<?php } ?></td>

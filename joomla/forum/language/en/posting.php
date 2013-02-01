@@ -42,6 +42,7 @@ $lang = array_merge($lang, array(
 	'ADD_POLL'					=> 'Poll creation',
 	'ADD_POLL_EXPLAIN'			=> 'If you do not want to add a poll to your topic leave the fields blank.',
 	'ALREADY_DELETED'			=> 'Sorry but this message is already deleted.',
+	'ATTACH_DISK_FULL'			=> 'There is not enough free disk space to post this attachment.',
 	'ATTACH_QUOTA_REACHED'		=> 'Sorry, the board attachment quota has been reached.',
 	'ATTACH_SIG'				=> 'Attach a signature (signatures can be altered via the UCP)',
 
@@ -130,7 +131,6 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BODY_EXPLAIN'		=> 'Enter your message here, it may contain no more than <strong>%d</strong> characters.',
 	'MESSAGE_DELETED'			=> 'This message has been deleted successfully.',
 	'MORE_SMILIES'				=> 'View more smilies',
-
 	'NOTIFY_REPLY'				=> 'Notify me when a reply is posted',
 	'NOT_UPLOADED'				=> 'File could not be uploaded.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'You cannot delete existing poll options.',

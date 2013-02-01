@@ -16,6 +16,7 @@
 			q: '{LA_BBCODE_Q_HELP}',
 			c: '{LA_BBCODE_C_HELP}',
 			l: '{LA_BBCODE_L_HELP}',
+			e: '{LA_BBCODE_LISTITEM_HELP}',
 			o: '{LA_BBCODE_O_HELP}',
 			p: '{LA_BBCODE_P_HELP}',
 			w: '{LA_BBCODE_W_HELP}',
@@ -74,6 +75,41 @@
 		<!-- BEGIN custom_tags -->
 			<input type="button" class="btnbbcode" name="addbbcode{custom_tags.BBCODE_ID}" value="{custom_tags.BBCODE_TAG}" onclick="bbstyle({custom_tags.BBCODE_ID})"<!-- IF custom_tags.BBCODE_HELPLINE !== '' --> onmouseover="helpline('cb_{custom_tags.BBCODE_ID}')" onmouseout="helpline('tip')"<!-- ENDIF --> />
 		<!-- END custom_tags -->
+<select name="syntaxbbcode" onchange="bbfontstyle('[codex=' + this.form.syntaxbbcode.options[this.form.syntaxbbcode.selectedIndex].value + ']', '[/codex]');this.form.syntaxbbcode.selectedIndex = 0;" title="{L_BBCODE_F_HELP}">
+    	<option selected="selected">Syntax Highlighter</option>		
+        <option value="coldfusion">Adobe ColdFusion</option>
+        <option value="actionscript3">ActionScript 3.0</option>
+		<option value="applescript">AppleScript</option>
+		<option value="shell" >Bash</option>
+		<option value="cpp">C o C++</option>
+        <option value="c-sharp">C#</option>
+        <option value="delphi">Delphi</option>
+        <option value="diff">Diff</option>
+        <option value="erlang">Erlang</option>
+        <option value="css">Hojas de estilo en cascada</option>
+        <option value="html">Html</option>
+        <option value="java">Java</option>
+        <option value="javafx">JavaFX</option>
+        <option value="javascript">JavaScript</option>
+        <option value="pascal">Pascal</option>
+        <option value="patch">Patch</option>
+        <option value="perl">Perl</option>
+        <option value="php">PHP</option>
+        <option value="powershell">Power Shell</option>
+        <option value="python">Python</option>
+        <option value="rails">Rails</option>
+        <option value="ruby">Ruby</option>
+        <option value="ror">Ruby on Rails</option>
+		<option value="scala">Scala</option>
+        <option value="sass">Sintácticamente CSS impresionante</option>
+        <option value="sql">SQL</option>
+        <option value="text">Texto</option>
+        <option value="vb">Visual Basic</option>
+		<option value="vbnet">Visual Basic .Net</option>
+        <option value="xhtml">Xhtml</option>
+        <option value="xml">Xml</option>
+        <option value="xslt">Xslt</option>			
+	</select>
 		</td>
 	</tr>
 <!-- ENDIF -->

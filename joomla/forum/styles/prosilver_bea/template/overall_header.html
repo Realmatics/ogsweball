@@ -1,5 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" lang="{S_USER_LANG}" xml:lang="{S_USER_LANG}">
+<link href="{ROOT_PATH}js/highlight/styles/{HLJS_THEME}.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{ROOT_PATH}js/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+hljs.initHighlightingOnLoad();
+// ]]>
+</script>
 <head>
 
 <meta http-equiv="content-type" content="text/html; charset={S_CONTENT_ENCODING}" />
@@ -102,10 +109,14 @@
 	<a id="top" name="top" accesskey="t"></a>
 	<div id="page-header">
 		<div class="headerbar">
-			<div class="inner"><span class="corners-top"><span></span></span>
+			<div class="inner">
+                               <span class="corners-top"><span></span></span>
+                               <!-- <img src="./styles/prosilver_bea/imageset/BannerWhiteMeshLow_77px.jpg" align="right" width="962" height="77" alt="" title=""> -->                           
+
 
 			<div id="site-description">
-				<a href="{U_INDEX}" title="{L_INDEX}" id="logo">{SITE_LOGO_IMG}</a>
+				<!--<a href="{U_INDEX}" title="{L_INDEX}" id="logo">{SITE_LOGO_IMG}</a>-->
+				<a href="../" title="opengeosys.org" id="logo">{SITE_LOGO_IMG}</a>
 				<h1>{SITENAME}</h1>
 				<p>{SITE_DESCRIPTION}</p>
 				<p class="skiplink"><a href="#start_here">{L_SKIP}</a></p>

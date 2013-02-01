@@ -118,6 +118,11 @@ class bbcode
 
 		// Remove the uid from tags that have not been transformed into HTML
 		$message = str_replace(':' . $this->bbcode_uid, '', $message);
+		
+		
+		// Latex for phpbb3
+		// old version: include("/path/to/phpbb_instalation/includes/phpbb-latex.php");
+		include('latex.php');
 	}
 
 	/**

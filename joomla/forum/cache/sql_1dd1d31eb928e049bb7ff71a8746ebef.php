@@ -1,5 +1,5 @@
 <?php exit; ?>
-1346353703
+1359586427
 SELECT ban_ip, ban_userid, ban_email, ban_exclude, ban_give_reason, ban_end FROM phpbb3010_banlist WHERE ban_email = '' AND (ban_userid = 1 OR ban_ip <> '')
-6
-a:0:{}
+1039
+a:6:{i:0;a:6:{s:6:"ban_ip";s:14:"183.216.38.210";s:10:"ban_userid";s:1:"0";s:9:"ban_email";s:0:"";s:11:"ban_exclude";s:1:"0";s:15:"ban_give_reason";s:0:"";s:7:"ban_end";s:1:"0";}i:1;a:6:{s:6:"ban_ip";s:12:"175.44.13.56";s:10:"ban_userid";s:1:"0";s:9:"ban_email";s:0:"";s:11:"ban_exclude";s:1:"0";s:15:"ban_give_reason";s:0:"";s:7:"ban_end";s:1:"0";}i:2;a:6:{s:6:"ban_ip";s:14:"222.77.226.104";s:10:"ban_userid";s:1:"0";s:9:"ban_email";s:0:"";s:11:"ban_exclude";s:1:"0";s:15:"ban_give_reason";s:0:"";s:7:"ban_end";s:1:"0";}i:3;a:6:{s:6:"ban_ip";s:12:"66.212.31.35";s:10:"ban_userid";s:1:"0";s:9:"ban_email";s:0:"";s:11:"ban_exclude";s:1:"0";s:15:"ban_give_reason";s:0:"";s:7:"ban_end";s:1:"0";}i:4;a:6:{s:6:"ban_ip";s:13:"46.118.115.71";s:10:"ban_userid";s:1:"0";s:9:"ban_email";s:0:"";s:11:"ban_exclude";s:1:"0";s:15:"ban_give_reason";s:0:"";s:7:"ban_end";s:1:"0";}i:5;a:6:{s:6:"ban_ip";s:14:"27.153.213.211";s:10:"ban_userid";s:1:"0";s:9:"ban_email";s:0:"";s:11:"ban_exclude";s:1:"0";s:15:"ban_give_reason";s:0:"";s:7:"ban_end";s:1:"0";}}

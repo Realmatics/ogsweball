@@ -751,6 +751,31 @@ class fileupload
 		$filename = $url['path'];
 		$filesize = 0;
 
+		$remote_max_filesize = $this->max_filesize;
+		if (!$remote_max_filesize)
+		{
+			$max_filesize = @ini_get('upload_max_filesize');
+
+			if (!empty($max_filesize))
+			{
+				$unit = strtolower(substr($max_filesize, -1, 1));
+				$remote_max_filesize = (int) $max_filesize;
+
+				switch ($unit)
+				{
+					case 'g':
+						$remote_max_filesize *= 1024;
+					// no break
+					case 'm':
+						$remote_max_filesize *= 1024;
+					// no break
+					case 'k':
+						$remote_max_filesize *= 1024;
+					// no break
+				}
+			}
+		}
+
 		$errno = 0;
 		$errstr = '';
 
@@ -779,9 +804,9 @@ class fileupload
 				$block = @fread($fsock, 1024);
 				$filesize += strlen($block);
 
-				if ($this->max_filesize && $filesize > $this->max_filesize)
+				if ($remote_max_filesize && $filesize > $remote_max_filesize)
 				{
-					$max_filesize = get_formatted_filesize($this->max_filesize, false);
+					$max_filesize = get_formatted_filesize($remote_max_filesize, false);
 
 					$file = new fileerror(sprintf($user->lang[$this->error_prefix . 'WRONG_FILESIZE'], $max_filesize['value'], $max_filesize['unit']));
 					return $file;
@@ -807,9 +832,9 @@ class fileupload
 					{
 						$length = (int) str_replace('content-length: ', '', strtolower($line));
 
-						if ($length && $length > $this->max_filesize)
+						if ($remote_max_filesize && $length && $length > $remote_max_filesize)
 						{
-							$max_filesize = get_formatted_filesize($this->max_filesize, false);
+							$max_filesize = get_formatted_filesize($remote_max_filesize, false);
 
 							$file = new fileerror(sprintf($user->lang[$this->error_prefix . 'WRONG_FILESIZE'], $max_filesize['value'], $max_filesize['unit']));
 							return $file;
@@ -830,8 +855,17 @@ class fileupload
 			$file = new fileerror($user->lang[$this->error_prefix . 'EMPTY_REMOTE_DATA']);
 			return $file;
 		}
+		
+		//edit after update - start
 
-		$tmp_path = (!@ini_get('safe_mode') || strtolower(@ini_get('safe_mode')) == 'off') ? false : $phpbb_root_path . 'cache';
+		//find
+		//$tmp_path = (!@ini_get('safe_mode') || strtolower(@ini_get('safe_mode')) == 'off') ? false : $phpbb_root_path . 'cache';
+				
+		//replace
+		$tmp_path = (@ini_get('open_basedir') || @ini_get('safe_mode') || strtolower(@ini_get('safe_mode')) == 'on') ? $phpbb_root_path . 'cache' : false;
+		
+		//edit after update - end
+		
 		$filename = tempnam($tmp_path, unique_id() . '-');
 
 		if (!($fp = @fopen($filename, 'wb')))

@@ -2,7 +2,7 @@
 
 <div id="page-footer">
 
-	<div class="navbar">
+	<div class="navbarf">
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<ul class="linklist">
