@@ -116,6 +116,8 @@ class ContentViewArticle extends JViewLegacy
 			$item->text = $item->introtext;
 		}
 
+		    //$item->text = str_replace( 'e', 'a', $item->text );
+		
 		//
 		// Process the content plugins.
 		//

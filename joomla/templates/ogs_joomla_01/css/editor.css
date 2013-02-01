@@ -2,6 +2,8 @@
 /* Created by Artisteer v3.1.0.48375 */
 
 /* meine Edits */
+
+
 #line {
 width: 98%;
 max-width: 100%;
@@ -20,6 +22,14 @@ left: -3000px;
 position: absolute;
 top: -2000px;
 width: 0px;
+}
+
+.center {
+text-align: center;
+}
+
+.bender {
+font-size: 20px;
 }
 
 /*

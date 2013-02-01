@@ -1,10 +1,12 @@
 <?php
+
+
 defined('_JEXEC') or die;
 
 require_once dirname(__FILE__) . str_replace('/', DIRECTORY_SEPARATOR, '/../../functions.php');
 
 // Note. It is important to remove spaces between elements.
-
+$assi=0;
 $tag = ($params->get('tag_id') != NULL) ? ' id="' . $params->get('tag_id') . '"' : '';
 if (isset($attribs['name']) && $attribs['name'] == 'position-1') {
     $menutype = 'horizontal';
@@ -22,6 +24,7 @@ if (isset($attribs['name']) && $attribs['name'] == 'position-1') {
             if ($item->shallower) {
                 if (($item->level - $item->level_diff) <= $limit) {
                     echo '</li>' . str_repeat('</ul></li>', $limit - $item->level + $item->level_diff);
+					//$assi++;
                     $skip = false;
                 }
             }
@@ -33,10 +36,19 @@ if (isset($attribs['name']) && $attribs['name'] == 'position-1') {
         $class .= ('alias' == $item->type
             && in_array($item->params->get('aliasoptions'), $path)
             || in_array($item->id, $path)) ? ' active' : '';
-        $class .= $item->deeper ? ' deeper' : '1';
-        $class .= $item->parent ? ' parent' : '2';
+        $class .= $item->deeper ? ' deeper' : '';
+        $class .= $item->parent ? ' parent' : '';
 
-        echo '<li class="' . $class  . ' li'.$i.'">';
+        //echo '<li class="' . $class  . ' li'.$assi.'">';
+		
+		//if ($item->deeper)
+		//echo '<li class="' . $class  . '">';
+		//else
+		echo '<li class="' . $class  . ' li'.$assi.'" onclick="changeClassProperties(\'li'.$assi.'\');">';		
+		//echo '<li class="' . $class  . ' li'.$assi.'">';
+		//echo '<li class="' . $class  . ' li'.$assi.'" onclick="changeert();">';
+		
+		
 
         // Render the menu item.
         switch ($item->type) {
@@ -57,8 +69,9 @@ if (isset($attribs['name']) && $attribs['name'] == 'position-1') {
             }
             echo '<ul>';
         }
-        elseif ($item->shallower)
+        elseif ($item->shallower){
             echo '</li>' . str_repeat('</ul></li>', $item->level_diff);
+			$assi++;}
         else
             echo '</li>';
     }

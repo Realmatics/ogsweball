@@ -48,6 +48,92 @@ if ($article->introVisible)
 if (strlen($article->readmore))
     $content .= $article->readmore($article->readmore, $article->readmoreLink);
 $content .= $article->event('afterDisplayContent');
+
+
+// Start - Mein Zusatz
+$dec_ea = $_GET["_search_"];
+if ($dec_ea != ""){
+$sep=" ";
+$arrayser = explode($sep,$dec_ea);
+for ($i = 0; $i < count($arrayser); $i++){
+$pos=0;
+for ($ia = 0; $ia < substr_count($content, $arrayser[$i])+1; $ia++){
+$posa = stripos($content, $arrayser[$i], $pos);
+$contentdavorl = $posa-$pos;
+$contentdavor = substr($content, $pos, $contentdavorl);
+$contentdavorla = $posa;
+$contentdavora = substr($content, 0, $contentdavorla);
+$contentdavorab[$ia] = $contentdavora;
+$checkstart = substr_count($contentdavora, '<');
+$checkende = substr_count($contentdavora, '>');
+$checkerg = $checkende - $checkstart;
+$contentgefundenl = strlen($arrayser[$i]);
+$contentgefunden = substr($content, $posa, $contentgefundenl);
+$posa = $posa + $contentgefundenl;
+$contentdanach = substr($content, $posa);
+$contentersetzdavor='<font style="background-color:yellow; font-weight:bold;">';
+$contentersetzdavorl=strlen($contentersetzdavor);
+$contentersetzdanach='</font>';
+$contentersetzdanachl=strlen($contentersetzdanach);
+if ($checkerg >= 0)
+{
+$contentgefunden = str_ireplace( ''.$arrayser[$i].'', ''.$contentersetzdavor.$arrayser[$i].$contentersetzdanach.'', $contentgefunden );
+}
+$content = $contentdavora.$contentgefunden.$contentdanach;
+$pos=$posa+$contentersetzdavorl+$contentersetzdanachl;
+}}}
+// Ende - Mein Zusatz
+
+
+
+/*
+for ($i=0, $count = count($results); $i < $count; $i++)
+			{
+				$row = &$results[$i]->text;
+
+				if ($state->get('match') == 'exact') {
+					$searchwords = array($searchword);
+					$needle = $searchword;
+				}
+				else {
+					$searchworda = preg_replace('#\xE3\x80\x80#s', ' ', $searchword);
+					$searchwords = preg_split("/\s+/u", $searchworda);
+ 					$needle = $searchwords[0];
+				}
+
+				$row = SearchHelper::prepareSearchContent($row, $needle);
+				$searchwords = array_unique($searchwords);
+				$searchRegex = '#(';
+				$x = 0;
+
+				foreach ($searchwords as $k => $hlword)
+				{
+					$searchRegex .= ($x == 0 ? '' : '|');
+					$searchRegex .= preg_quote($hlword, '#');
+					$x++;
+				}
+				$searchRegex .= ')#iu';
+
+				$row = preg_replace($searchRegex, '<span class="highlight">\0</span>', $row);
+
+				$result = &$results[$i];
+				if ($result->created) {
+					$created = JHtml::_('date', $result->created, JText::_('DATE_FORMAT_LC3'));
+				}
+				else {
+					$created = '';
+				}
+
+				$result->text		= JHtml::_('content.prepare', $result->text, '', 'com_search.search');
+				$result->created	= $created;
+				$result->count		= $i + 1;
+			}
+
+
+$content = $result->text;
+*/
+
+//$params['content'] = '0:'.$contentdavorab[0].'<br>1:'.$contentdavorab[1].'<br>2:'.$contentdavorab[2].'<br>3:'.$contentdavorab[3];
 $params['content'] = $content;
 // Change the order of "if" statements to change the order of article metadata footer items.
 if (strlen($article->category))
@@ -57,4 +143,6 @@ if (strlen($article->category))
 // Render article
 echo $article->article($params);
 echo $component->endPageContainer();
+
+
 

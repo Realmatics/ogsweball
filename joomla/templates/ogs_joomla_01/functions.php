@@ -56,7 +56,7 @@ if (!defined('_ARTX_FUNCTIONS')) {
     		foreach ($data['metadata-footer-icons'] as $icon)
     			artxFragment('', $icon, '', ' | ');
     	artxFragmentEnd("\r\n</div>\r\n");
-    	return artxFragmentEnd("\r\n</div>\r\n\r\n		<div class=\"cleared\"></div>\r\n    </div>\r\n</div>\r\n", '', true);
+    	return artxFragmentEnd("\r\n</div>\r\n		<div class=\"cleared\"></div>\r\n    </div>\r\n</div>\r\n", '', true);
     }
 
     function artxBlock($caption, $content, $classes = '')

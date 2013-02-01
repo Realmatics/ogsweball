@@ -36,7 +36,7 @@
    top: 0;
    width:100%;
    height: 118px;
-   background-image: url('../images/header.png');
+   background-image: url('../images/BannerWhiteMeshTop.jpg');
    background-repeat: no-repeat;
    background-position:top left;
 }
@@ -49,7 +49,7 @@
    width:expression(parentNode.clientWidth - 2 * 3 + 'px');
    left:3px;
    height: 118px;
-   background-image: url('../images/header.jpg');
+   background-image: url('../images/BannerWhiteMeshTop.jpg');
    background-repeat: no-repeat;
    background-position: center left;
 }
@@ -88,7 +88,7 @@ ul.my-hmenu, ul.my-hmenu ul, ul.my-hmenu li, ul.my-hmenu a {
 .my-hmenu a 
 {
    display:inline-block;
-   color: #FFFFFF;
+   color: #000000;
    padding: 0 33px;
    line-height: 27px;
    text-align: center;
@@ -226,7 +226,8 @@ ul.my-hmenu li li{
 }
 .my-footer{
    zoom:1;
-   background:#99BBE5;
+   /*background:#99BBE5;*/
+   background-image: url('../images/BannerWhiteMeshLow.jpg');
 }
 
 .my-footer-text

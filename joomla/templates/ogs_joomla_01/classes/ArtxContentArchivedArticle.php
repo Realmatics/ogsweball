@@ -23,7 +23,7 @@ class ArtxContentArchivedArticle extends ArtxContentArticleBase
 
     public function intro($intro)
     {
-        return '<div class="my-article">'
+        return '<div class="my-article"><!-- article start -->'
                  . JHtml::_('string.truncate', $intro,
                             $this->_articleParams->get('introtext_limit'))
                 . '</div>';

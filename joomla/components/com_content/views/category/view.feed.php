@@ -45,8 +45,9 @@ class ContentViewCategory extends JViewLegacy
 			// Get row fulltext
 			$db = JFactory::getDBO();
 			$query = 'SELECT' .$db->quoteName('fulltext'). 'FROM #__content WHERE id ='.$row->id;
-			$db->setQuery($query);
+			$db->setQuery($query);			
 			$row->fulltext = $db->loadResult();
+			//$row->fulltext = str_replace( 'e', 'a', $row->fulltext );
 
 			// Get description, author and date
 			$description = ($params->get('feed_summary', 0) ? $row->introtext.$row->fulltext : $row->introtext);

@@ -1,6 +1,6 @@
 <?php
 class JConfig {
-	public $offline = '1';
+	public $offline = '0';
 	public $offline_message = 'Diese Website ist zurzeit im Wartungsmodus.<br />Bitte später wiederkommen.';
 	public $display_offline_message = '1';
 	public $offline_image = '';
@@ -31,7 +31,7 @@ class JConfig {
 	public $offset = 'Europe/Berlin';
 	public $offset_user = 'Europe/Berlin';
 	public $mailer = 'mail';
-	public $mailfrom = 'michael.kleiter@gmx.de';
+	public $mailfrom = 'info@opengeosys.org';
 	public $fromname = 'Joomla 2.5.4';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
@@ -43,10 +43,10 @@ class JConfig {
 	public $caching = '0';
 	public $cache_handler = 'file';
 	public $cachetime = '15';
-	public $MetaDesc = '';
-	public $MetaKeys = '';
+	public $MetaDesc = 'OpenGeoSys is a free scientific multi-platform modeling package that enables numerical simulations of individual or coupled thermo-hydro-mechanical-chemical (THMC) processes in porous and fractured media.';
+	public $MetaKeys = 'OpenGeoSys, THMC, open, source, modeling, thermo, hydro, mechanical, chemical, process, numerical, simulation, porous, fractured, media';
 	public $MetaTitle = '1';
-	public $MetaAuthor = '1';
+	public $MetaAuthor = '0';
 	public $MetaVersion = '0';
 	public $robots = '';
 	public $sef = '1';
@@ -59,7 +59,7 @@ class JConfig {
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $MetaRights = '';
-	public $sitename_pagetitles = '0';
+	public $sitename_pagetitles = '1';
 	public $force_ssl = '0';
 	public $feed_email = 'author';
 	public $cookie_domain = '';

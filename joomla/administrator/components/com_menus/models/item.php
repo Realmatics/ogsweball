@@ -1020,8 +1020,8 @@ class MenusModelItem extends JModelAdmin
 	public function rebuild()
 	{
 		// Initialiase variables.
-		$db = $this->getDbo();
-		$table = $this->getTable();
+		$db = $this->getDbo(); 
+		$table = $this->getTable(); 
 
 		if (!$table->rebuild()) {
 			$this->setError($table->getError());

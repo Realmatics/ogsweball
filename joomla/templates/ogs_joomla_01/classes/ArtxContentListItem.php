@@ -47,6 +47,6 @@ abstract class ArtxContentListItem extends ArtxContentItem
     
     public function intro($intro)
     {
-        return "<div class=\"my-article\">" . $intro . "</div>";
+        return "<div class=\"my-article\"><!-- article start -->" . $intro . "</div>";
     }
 }

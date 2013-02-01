@@ -1,3 +1,3 @@
 <FilesMatch \.php$>
-SetHandler x-httpd-php5
+SetHandler x-httpd-php53
 </FilesMatch>

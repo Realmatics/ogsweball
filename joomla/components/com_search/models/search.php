@@ -141,6 +141,7 @@ class SearchModelSearch extends JModelLegacy
 			}
 
 			$this->_total	= count($rows);
+			//$this->_total	= 5;
 			if ($this->getState('limit') > 0) {
 				$this->_data	= array_splice($rows, $this->getState('limitstart'), $this->getState('limit'));
 			} else {
@@ -160,6 +161,7 @@ class SearchModelSearch extends JModelLegacy
 	function getTotal()
 	{
 		return $this->_total;
+
 	}
 
 	/**

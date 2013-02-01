@@ -77,17 +77,25 @@ class ArtxContentSingleArticle extends ArtxContentItem
     
     public function toc($toc)
     {
-        return '<div class="my-article">' . $toc . '</div>';
+        return '<div class="my-article"><!-- article start toc -->' . $toc . '</div>';
     }
     
     public function intro($intro)
     {
-        return '<div class="my-article">' . $intro . '</div>';
+        return '<div class="my-article"><!-- article start intro -->' . $intro . '</div>';
     }
 
     public function text($text)
     {
-        return '<div class="my-article">' . $text . '</div>';
+        return '<div class="my-article">		
+		
+<!-- ------------------------------------------------------------------------------ article start ------------------------------------------------------------------------------ -->
+				
+		' . $text . '
+				
+<!-- ------------------------------------------------------------------------------ article end ------------------------------------------------------------------------------ -->
+				
+		</div>';
     }
 
 }

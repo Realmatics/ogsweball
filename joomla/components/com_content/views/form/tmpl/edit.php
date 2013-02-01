@@ -179,6 +179,14 @@ endif;
 		<?php echo $this->form->getLabel('access'); ?>
 		<?php echo $this->form->getInput('access'); ?>
 		</div>
+		<div class="formelm">
+		<?php echo $this->form->getLabel('versioning'); ?>
+		<!-- <?php echo $this->form->getInput('versioning'); ?> -->
+		<select id="jform_versioning" name="jform[versioning]" class="inputbox" aria-invalid="false">
+		<option value="0" selected="selected">No</option>
+		<option value="1">Yes</option>
+		</select>
+		</div>
 		<?php if (is_null($this->item->id)):?>
 			<div class="form-note">
 			<p><?php echo JText::_('COM_CONTENT_ORDERING'); ?></p>

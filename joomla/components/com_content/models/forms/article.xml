@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
+
 	<fieldset addfieldpath="/administrator/components/com_categories/models/fields">
 		<field
 			id="id"
@@ -75,6 +76,19 @@
 			type="list"
 			label="JGLOBAL_FIELD_FEATURED_LABEL"
 			description="JGLOBAL_FIELD_FEATURED_DESC"
+			class="inputbox"
+			default="0"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field
+			id="versioning"
+			name="versioning"
+			type="list"
+			label="JGLOBAL_FIELD_VERSIONING_LABEL"
+			description="JGLOBAL_FIELD_VERSIONING_DESC"
 			class="inputbox"
 			default="0"
 		>
@@ -172,6 +186,7 @@
 			class="inputbox"
 			size="1" />
 	</fieldset>
+
 		<fields name="images">
 		<fieldset name="image-intro">
 			<field
