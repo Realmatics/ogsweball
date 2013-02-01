@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>Checkin Items Frontend</name>
+	<!-- The following elements are optional and free of formatting conttraints -->
+	<creationDate>03-20-2012</creationDate>
+	<author>Jacarlin Web Solutions</author>
+	<authorEmail>info@jacarlin.com.my</authorEmail>
+	<authorUrl>http://www.jacarlin.com.my</authorUrl>
+	<copyright>Copyright (C) 2012 Jacob Arlington. All rights reserved.</copyright>
+	<license>General Public License</license>
+    <version>2.5.3</version>
+	<description>Checkin Items in FrontEnd</description>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>checkinitemsfrontend.php</filename>
+		<folder>views</folder>
+		<folder>images</folder>
+	</files>
+	<administration>
+	  <menu img="class:contact">Checkin Frontend</menu>
+		<files folder="admin">
+    	<filename>index.html</filename>
+	    <filename>checkinitemsfrontend.php</filename>
+		<filename>controller.php</filename>
+		<filename>config.xml</filename>
+		<filename>access.xml</filename>
+	    <folder>views</folder>		
+		<folder>helpers</folder>	
+		</files>
+	</administration>
+</extension>

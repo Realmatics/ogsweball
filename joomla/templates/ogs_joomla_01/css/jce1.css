@@ -1,0 +1,57 @@
+
+.ueberschrift {
+font-family: Helvetica, Geneva, Arial, Sans-Serif;
+font-size: 18pt; 
+line-height: 1.8em;
+}
+
+.schrift-gross {
+font-family: Helvetica, Geneva, Arial, Sans-Serif;
+text-align: justify;
+font-size: 14pt;
+line-height: 1.6em;
+}
+
+.schrift-normal {
+font-family: Helvetica, Geneva, Arial, Sans-Serif;
+text-align: justify;
+font-size: 12pt;
+line-height: 1.4em;
+}
+
+.schrift-normal-box {
+font-family: Helvetica, Geneva, Arial, Sans-Serif;
+text-align: justify;
+font-size: 12pt;
+line-height: 1.3em;
+background-color: #F3F6F8;
+padding: 1em;
+}
+
+.schrift-klein {
+font-family: Helvetica, Geneva, Arial, Sans-Serif;
+text-align: justify;
+font-size: 11pt;
+line-height: 1.2em;
+}
+
+.bilder-rahmen-blau {
+border: 1px solid #326496;
+padding: 5px;
+}
+
+.vertikal-abstand-1px {
+height: 1px;
+}
+
+.vertikal-abstand-2px {
+height: 2px;
+}
+
+.vertikal-abstand-5px {
+height: 5px;
+}
+
+.vertikal-abstand-10px {
+height: 10px;
+}

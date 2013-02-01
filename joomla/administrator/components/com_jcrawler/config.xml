@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<document>
+  <options>
+    <forbiddentypes>.gz
+.xml
+.inc
+.old
+.save
+.txt
+.js
+~
+.LCK
+.zip
+.ZIP
+.bmp
+.BMP
+.jpg
+.jpeg
+.JPG
+.GIF
+.PNG
+.png
+.gif
+.CSV
+.csv
+.css
+.class
+.jar</forbiddentypes>
+    <excludelist>jsmallfib
+index
+search
+sid
+=&amp;amp;
+rss
+org/view
+org/faq</excludelist>
+    <sitemapurl>/sitemap.xml</sitemapurl>
+    <priority>auto</priority>
+    <changefreq>daily</changefreq>
+    <method>curl</method>
+    <level>6</level>
+    <maxconn>5</maxconn>
+    <docroot>/var/www/web161/html/joomla</docroot>
+    <timeout>60</timeout>
+	</options>
+</document>
